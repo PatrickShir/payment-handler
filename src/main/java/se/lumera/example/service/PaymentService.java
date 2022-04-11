@@ -71,7 +71,6 @@ public class PaymentService {
     }
 
     private Account setOpeningPaymentFromBetalningsservice(String row, Account account) throws ParseException {
-        account.setPostType(Character.toString(row.charAt(0)));
         account.setAccountNumber(row.substring(1, 16).replace(" ", ""));
         account.setSum(new BigDecimal(row.substring(16, 30).replace(",", ".").replace(" ", "")));
         account.setQuantity(Integer.parseInt(row.substring(30, 40).replace(" ", "")));
@@ -82,7 +81,6 @@ public class PaymentService {
 
     private Payment setPaymentRowFromBetalningsservice(String row) {
         Payment payment = new Payment();
-        payment.setPostType(Character.toString(row.charAt(0)));
         payment.setAmount(new BigDecimal(row.substring(1, 15).replace(",", ".").replace(" ", "")));
         payment.setReference(row.substring(15, 50).replace(" ", ""));
         paymentReceiver.payment(payment.getAmount(), payment.getReference());
@@ -90,7 +88,6 @@ public class PaymentService {
     }
 
     private Account setOpeningPaymentFromInbetalningstjansten(String row, Account account) {
-        account.setPostType(row.substring(0, 2));
         account.setAccountNumber(row.substring(10, 24));
         account.setCurrency("SEK"); //I'm making a wild assumption here and I purposefully also left date as null
         return account;
@@ -98,7 +95,6 @@ public class PaymentService {
 
     private Payment setPaymentRowFromInbetalningstjansten(String row) {
         Payment payment = new Payment();
-        payment.setPostType(row.substring(0, 2));
         payment.setAmount(new BigDecimal(row.substring(2, 22).replace(",", ".")));
         payment.setReference(row.substring(40, 65).replace(" ", ""));
         paymentReceiver.payment(payment.getAmount(), payment.getReference());

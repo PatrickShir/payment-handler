@@ -1,16 +1,16 @@
 package main.java.se.lumera.example.model;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public class Payment {
-    private String postType;
+    private UUID id = UUID.randomUUID();
     private BigDecimal amount;
     private String reference;
 
-    public void setPostType(String postType) {
-        this.postType = postType;
+    public UUID getId() {
+        return id;
     }
-
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
@@ -30,7 +30,7 @@ public class Payment {
     @Override
     public String toString() {
         return "Payment{" +
-                "postType='" + postType + '\'' +
+                "id='" + id + '\'' +
                 ", amount=" + amount +
                 ", reference='" + reference + '\'' +
                 '}';

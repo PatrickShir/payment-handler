@@ -3,9 +3,10 @@ package main.java.se.lumera.example.model;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 public class Account {
-    private String postType;
+    private UUID id = UUID.randomUUID();
     private String accountNumber;
     private BigDecimal sum;
     private int quantity;
@@ -13,8 +14,8 @@ public class Account {
     private String currency;
     private List<Payment> payments;
 
-    public void setPostType(String postType) {
-        this.postType = postType;
+    public UUID getId() {
+        return id;
     }
 
     public void setAccountNumber(String accountNumber) {
@@ -60,7 +61,7 @@ public class Account {
     @Override
     public String toString() {
         return "Account{" +
-                "postType='" + postType + '\'' +
+                "id='" + id + '\'' +
                 ", accountNumber='" + accountNumber + '\'' +
                 ", sum=" + sum +
                 ", quantity=" + quantity +

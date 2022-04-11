@@ -31,6 +31,8 @@ class PaymentServiceTest {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date expectedDate = formatter.parse("2011-03-15");
 
+        Assertions.assertNotNull(account.getId());
+        Assertions.assertNotNull(account.getPayments().get(0));
         Assertions.assertEquals(account.getPayments().size(), 4);
         Assertions.assertEquals(account.getPayments().get(0).getReference(), "1234567890");
         Assertions.assertEquals(account.getAccountNumber(), "55555555555555");
@@ -44,6 +46,8 @@ class PaymentServiceTest {
         List<String> data = Files.readAllLines(Paths.get(folderPath + "/" + fileInbetalning), StandardCharsets.ISO_8859_1);
         Account account = paymentService.extractData(data);
 
+        Assertions.assertNotNull(account.getId());
+        Assertions.assertNotNull(account.getPayments().get(0));
         Assertions.assertEquals(account.getPayments().size(), 3);
         Assertions.assertEquals(account.getPayments().get(0).getReference(), "9876543210");
         Assertions.assertEquals(account.getAccountNumber(), "12341234567897");
