@@ -19,7 +19,7 @@ Reference: 3456789012
 Amount: 400.07
 Reference: 4567890123
 --- BUNDLE FINISHED! ---
-Account created: Account{id='559a7f9b-619a-4c97-b53b-cc5196e0c908', accountNumber='55555555555555', sum=4711.17, quantity=4, date=Tue Mar 15 00:00:00 CET 2011, currency='SEK', payments=[Payment{id='99401f74-60f1-4a53-8dfd-c83acd7869c8', amount=3000, reference='1234567890'}, Payment{id='d962b73e-d399-4464-ae03-07c9a59bc64d', amount=1000, reference='2345678901'}, Payment{id='9844ba38-8972-413c-a7c5-5efae49cdd3a', amount=300.10, reference='3456789012'}, Payment{id='2c501b6f-1e87-4a27-9e8d-54a7507c5129', amount=400.07, reference='4567890123'}]}
+Account created: Account{id='867b8e90-bbb4-4192-8478-d01180fde7d7', accountNumber='55555555555555', totalCash=4711.17, amountOfTransactions=4, date=Tue Mar 15 00:00:00 CET 2011, currency='SEK', payments=[Payment{id='dfa95e84-13c5-4e62-99e7-356129b0b4e5', amount=3000, reference='1234567890'}, Payment{id='b3833da7-c035-4147-ba34-37e89ab155a1', amount=1000, reference='2345678901'}, Payment{id='3a0daddf-c12a-4bb5-a7b0-bbd6439c1e6a', amount=300.10, reference='3456789012'}, Payment{id='3b27e3f2-f2b8-4f53-8bd2-7a924f2ffc26', amount=400.07, reference='4567890123'}]}
 --- BUNDLE STARTED! ---
 Account: 12341234567897
 Date: null
@@ -34,5 +34,5 @@ Reference: 9876543210
 Amount: 1030000
 Reference: 9876543210
 --- BUNDLE FINISHED! ---
-Account created: Account{id='3e4e149d-0175-46b7-a050-7cfe93792213', accountNumber='12341234567897', sum=1530000, quantity=3, date=null, currency='SEK', payments=[Payment{id='98576db0-390d-4665-842b-e17ec159907c', amount=400000, reference='9876543210'}, Payment{id='ceba15ba-6ea3-43d3-bf8f-c1cb51a02ab1', amount=100000, reference='9876543210'}, Payment{id='bf2484b1-3407-4364-a5e9-215402ff2db9', amount=1030000, reference='9876543210'}]}
+Account created: Account{id='28421f9e-5266-4d05-8931-fe7a59c1c2c8', accountNumber='12341234567897', totalCash=1530000, amountOfTransactions=3, date=null, currency='SEK', payments=[Payment{id='4a9ec8fc-ac49-49cf-b656-968b6a1a794e', amount=400000, reference='9876543210'}, Payment{id='fed40446-e450-4e0c-a1e6-d6297e1bfb01', amount=100000, reference='9876543210'}, Payment{id='00744e56-f350-4bd7-8016-8ae96a0d8cb3', amount=1030000, reference='9876543210'}]}
 ```
