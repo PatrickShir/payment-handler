@@ -63,8 +63,8 @@ public class Account {
         return "Account{" +
                 "id='" + id + '\'' +
                 ", accountNumber='" + accountNumber + '\'' +
-                ", sum=" + totalCash +
-                ", quantity=" + amountOfTransactions +
+                ", totalCash=" + totalCash +
+                ", amountOfTransactions=" + amountOfTransactions +
                 ", date=" + date +
                 ", currency='" + currency + '\'' +
                 ", payments=" + payments +

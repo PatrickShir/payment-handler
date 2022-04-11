@@ -11,6 +11,7 @@ public class Payment {
     public UUID getId() {
         return id;
     }
+
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
