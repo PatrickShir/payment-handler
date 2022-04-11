@@ -72,8 +72,8 @@ public class PaymentService {
 
     private Account setOpeningPaymentFromBetalningsservice(String row, Account account) throws ParseException {
         account.setAccountNumber(row.substring(1, 16).replace(" ", ""));
-        account.setSum(new BigDecimal(row.substring(16, 30).replace(",", ".").replace(" ", "")));
-        account.setQuantity(Integer.parseInt(row.substring(30, 40).replace(" ", "")));
+        account.setTotalCash(new BigDecimal(row.substring(16, 30).replace(",", ".").replace(" ", "")));
+        account.setAmountOfTransactions(Integer.parseInt(row.substring(30, 40).replace(" ", "")));
         account.setCurrency(row.substring(48, 51));
         account.setDate(formatter.parse(row.substring(40, 48)));
         return account;
@@ -102,8 +102,8 @@ public class PaymentService {
     }
 
     private Account setClosingPaymentFromInbetalningstjansten(String row, Account account) {
-        account.setSum(new BigDecimal(row.substring(2, 22).replace(",", ".")));
-        account.setQuantity(Integer.parseInt(row.substring(30, 38)));
+        account.setTotalCash(new BigDecimal(row.substring(2, 22).replace(",", ".")));
+        account.setAmountOfTransactions(Integer.parseInt(row.substring(30, 38)));
         return account;
     }
 }

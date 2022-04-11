@@ -8,8 +8,8 @@ import java.util.UUID;
 public class Account {
     private UUID id = UUID.randomUUID();
     private String accountNumber;
-    private BigDecimal sum;
-    private int quantity;
+    private BigDecimal totalCash;
+    private int amountOfTransactions;
     private Date date;
     private String currency;
     private List<Payment> payments;
@@ -22,12 +22,12 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    public void setSum(BigDecimal sum) {
-        this.sum = sum;
+    public void setTotalCash(BigDecimal totalCash) {
+        this.totalCash = totalCash;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setAmountOfTransactions(int amountOfTransactions) {
+        this.amountOfTransactions = amountOfTransactions;
     }
 
     public void setDate(Date date) {
@@ -63,8 +63,8 @@ public class Account {
         return "Account{" +
                 "id='" + id + '\'' +
                 ", accountNumber='" + accountNumber + '\'' +
-                ", sum=" + sum +
-                ", quantity=" + quantity +
+                ", sum=" + totalCash +
+                ", quantity=" + amountOfTransactions +
                 ", date=" + date +
                 ", currency='" + currency + '\'' +
                 ", payments=" + payments +
